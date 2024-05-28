@@ -1,0 +1,13 @@
+/* . is for class  */
+.red {
+    color: red;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+/* # is for id  */
+#firstdiv {
+    /* background-color: red; */
+}
