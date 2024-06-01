@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: aqua;
+        }
+
+        .box1 {
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid blue;
+            height: 200px;
+            /* box-sizing: border-box make total height including content size, padding and border size equal to given height */
+            box-sizing: border-box;
+        }
+
+        /* margin collapse is concept which says that if 2 elements have same margin then margin will be given only one time and if margin not same the bigger one will be given */
+        .box2 {
+            color: red;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- In box model firstly an element get Margin then Border then Padding  -->
+    <div class="box box1">
+        I am a box
+    </div>
+    <div class="box box2">
+        I am another box
+    </div>
+</body>
+
+</html>
