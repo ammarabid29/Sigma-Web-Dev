@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* display inline change block element to inline element  */
+        /* top-padding, top-margin, width and height properties are not implement in inline element that issue is resolve by inline-block */
+        .box {
+            border: 2px solid blue;
+            /* display: inline; */
+            width: 319px;
+            /* height: 355px; */
+            display: inline-block;
+            /* display: flex;
+            justify-content: center; */
+            /* display: grid; */
+            padding: 45px;
+            margin: 34px;
+        }
+
+        .box1 {
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        This is a box
+    </div>
+    <div class="box">
+        also a nice box
+    </div>
+
+    <span>I am a good</span>
+    <span>boy</span>
+</body>
+
+</html>
