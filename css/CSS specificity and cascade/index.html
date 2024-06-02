@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity & Cascade</title>
+    <style>
+        h1 {
+            color: aqua;
+        }
+
+
+
+        .cpurple {
+            color: purple;
+        }
+
+        .cred {
+            color: red;
+        }
+
+        .yellow {
+            color: yellow !important;
+        }
+
+        [data-x=a] {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Specificity or priorirty of css properties
+    Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector -->
+    <!-- Attribute Selector is data-x="a" -->
+    <!-- if selector is same than position matters -->
+    <!-- to override all properties "!important" keyword is used -->
+    
+    <div>
+        <h1 style="color: maroon;" class="yellow cred cpurple" data-x="a">
+            CSS Specificty
+        </h1>
+    </div>
+</body>
+
+</html>
