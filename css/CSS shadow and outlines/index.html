@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow and Outlines</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 5px 5px 5px green;
+        }
+
+        /* outline is same as border but don't take area in box model but border takes.
+        outline offset is used to give place which in given by margin and padding in borders */
+        /* border radius is for giving curves but outline directly can not */
+        .text-element {
+            text-shadow: 8px 8px 3px rgb(242, 165, 225);
+            outline: 2px solid black;
+            border: 2px solid green;
+            border-radius: 4px;
+            outline-offset: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a box
+    </div>
+    <p class="text-element">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus nam fugit unde repellendus accusamus
+        facere quas hic nisi, in provident itaque mollitia harum! Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Fugiat sint, ullam, a soluta facilis veniam quibusdam maxime, unde alias quasi sunt laborum accusamus.
+    </p>
+</body>
+
+</html>
