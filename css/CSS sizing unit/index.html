@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing unit</title>
+    <style>
+        /* font size property is inherited */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* html is root element  */
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            border: 2px solid black;
+            /* width: 1536px; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aquamarine;
+            /* box-sizing: border-box; */
+        }
+
+        /* minheight means firstly its setted to specific value but size increases with increase of elements */
+        .container {
+            border: 2px solid black;
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            margin: 23px auto;
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+
+        /* em means percent of the font size which is inherited e.g container have 18px font size p is in container with 2em font size then the font size of p will be 36px */
+        /* rem means percent of the font size which is root element size e.g html have 12px font size p is 2rem font size then the font size of p will be 24px */
+        .container > div {
+            font-size: 2em;
+            /* font-size: 2rem; */
+            width: 50%;
+            border: 2px solid red;
+        }
+
+        /* % means percent of its parent element  */
+        .container > div > div{
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        /* if height < width than vmin=vh
+        if width < height than vmin=vw 
+        and vice versa for vmax
+        here device's height and width meant*/
+        .mycont {
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: black;
+            font-size: 22px;
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ipsam obcaecati tenetur doloremque quasi
+            ducimus
+            ex voluptatem asperiores alias, nobis vel at nemo? Illum unde provident magni dicta corrupti voluptates
+            delectus, nam cum harum quae temporibus dolorum tenetur earum similique explicabo. Labore pariatur at
+            laboriosam
+            aut similique non odit porro iusto dolor! Dolorem facilis libero earum?
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corporis laudantium incidunt porro harum autem similique, sapiente nemo deserunt sunt quos inventore tempore?
+            </div>
+        </div>
+        
+        <!-- To check "minheight" add lorem999  -->
+    </div>
+    <div class="mycont">
+        This is another div
+    </div>
+</body>
+
+</html>
