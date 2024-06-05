@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi Color Website</title>
+    <title>CSS MultiColor Website</title>
     <style>
-        :root {
+        /* :root {
             --color: black;
             --seccolor: gray;
+            --textcolor: white;
+        } */
+
+        :root {
+            --seccolor: rgba(200, 7, 200, 0.893);
+            --color: rgb(223, 171, 239);
             --textcolor: white;
         }
 
@@ -22,8 +28,8 @@
         }
 
         .nav {
-           background-color: var(--seccolor);
-         
+            background-color: var(--seccolor);
+
         }
 
         .nav ul {
@@ -33,22 +39,23 @@
 
         .nav ul li {
             padding: 20px;
-            border: 1px solid var(--color);
             cursor: pointer;
         }
-        li:hover{
-            background-color: var(--color);
-            color: var(--textcolor);
-        }
+
+       a:hover{
+        background-color: var(--color);
+        color: var(--textcolor);
+       }
     </style>
 </head>
 
 <body>
     <div class="nav">
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact Us</a></li>
         </ul>
     </div>
 </body>
