@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        header {
+            background-color: pink;
+            height: 100px;
+            position: sticky;
+            top: 0px;
+        }
+
+        main {
+            background-color: green;
+            height: 555px;
+            width: 90vw;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        main>div {
+            margin: auto;
+        }
+
+        .box1 {
+            background-color: bisque;
+            height: 500px;
+            width: 30vw;
+        }
+
+        .box2 {
+            background-color: lightblue;
+            height: 500px;
+            width: 30vw;
+        }
+
+        .about {
+            width: 80vw;
+            height: auto;
+            margin: auto;
+            margin-top: 30px;
+            padding: 30px;
+            color: white;
+            border: 2px solid white;
+            border-radius: 17px;
+            text-align: center;
+            font-size: 4em;
+        }
+
+        footer {
+            margin-top: 50px;
+            height: 50px;
+            background-color: white;
+        }
+        .icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(249, 170, 73);
+            float: right;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <Header></Header>
+    <main>
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </main>
+    <div class="icon"></div>
+    <div class="about">Welcome to this Sigma Web Development Express</div>
+    <footer></footer>
+</body>
+
+</html>
