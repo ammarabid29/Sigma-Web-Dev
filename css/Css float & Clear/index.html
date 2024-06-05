@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        .cards {
+            border: 2px solid black;
+            /* to avoid overflow in float */
+            display: flow-root;
+        }
+
+        img {
+            float: right;
+        }
+
+        .card {
+            border: 2px solid red;
+        }
+
+        .card:nth-child(3) {
+            background-color: aqua;
+            /* to avoid flow element on sides then use clear  */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSL5bzfc17HYfGHmA5-NiQU61cDZODim2RQ&sv" alt=""
+            width="230">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, libero quasi? A accusamus hic
+                veritatis! Accusamus deserunt veritatis facilis aliquid, commodi rerum doloremque dicta amet repellat
+                deleniti sapiente? Iste doloremque ea aut modi amet.</p>
+        </div>
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, qui omnis cupiditate nam eum sapiente
+            nostrum tempore ullam adipisci quia dicta illo doloribus exercitationem consectetur fugit doloremque nulla
+            labore hic maiores quae, temporibus ea quidem distinctio quam! Ad sapiente, blanditiis laudantium doloribus
+            accusamus quis cupiditate aut quasi temporibus quae eveniet commodi ut sint debitis, suscipit quos voluptas
+            vitae a facilis! Quos vel hic quisquam illum doloremque ipsa? Nesciunt est delectus, eaque quibusdam dicta
+            iste perferendis amet, asperiores enim nostrum optio ipsa fugiat. Rerum minima libero nulla, earum culpa quo
+            ipsum consequatur asperiores dicta et! Nihil facere, cum, consectetur excepturi obcaecati quidem optio porro
+            minima deserunt repellat eaque. Fuga numquam exercitationem suscipit perferendis dolorum odit tempora unde
+            qui consequatur, nostrum minus, modi error reiciendis atque soluta nihil. Ducimus, assumenda esse ad id ea
+            soluta porro aliquam aspernatur non, corrupti, vitae ratione consequatur et tempore ipsam quo iste dicta
+            maxime magni natus quas! Omnis iure eligendi aspernatur enim repellat iusto illum adipisci recusandae totam
+            aliquid provident, impedit distinctio necessitatibus animi cumque magnam eveniet dolorum repellendus porro
+            amet nam assumenda veritatis! Nisi, itaque rerum ipsum repellendus laudantium nemo adipisci voluptas in
+            natus dolorum, odio exercitationem eligendi accusamus? Reiciendis nihil nostrum aspernatur ipsum adipisci
+            deleniti, maiores labore sed iure impedit vero officiis vitae delectus minima sequi! Enim asperiores,
+            voluptate velit molestiae dolore, maiores nemo ullam corporis hic blanditiis rerum. Quas nesciunt accusamus
+            corrupti maxime illum cum numquam iusto deleniti impedit soluta, molestiae expedita nam consequatur qui
+            adipisci veniam aliquam earum eaque dicta. Odit optio aliquam nam sit voluptates nemo quo fugit tempore
+            aperiam debitis veniam totam ab, vitae architecto exercitationem saepe quasi quibusdam tenetur praesentium.
+            Eaque tempora cupiditate voluptas, nihil laudantium cum harum, exercitationem alias consectetur repellat,
+            aliquid blanditiis sed ex molestias. Id culpa odit omnis magni voluptates nesciunt asperiores maxime ipsam
+            corporis ratione? Nihil doloremque eos culpa doloribus magnam, aperiam error reiciendis id suscipit
+            voluptate qui! Sequi obcaecati culpa fugiat maiores blanditiis autem, recusandae illum quia voluptatibus
+            nihil perspiciatis quam rem, quod, repudiandae aperiam cupiditate ea.
+        </div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+
+</html>
