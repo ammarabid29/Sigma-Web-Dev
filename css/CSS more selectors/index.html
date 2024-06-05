@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selector</title>
+    <style>
+        /* .box:first-child {
+            background-color: red;
+        } */
+
+        /* .box::first-line{
+            color: yellow;
+        } */
+
+        /* use * for all element inside it  */
+        /* .boxes * {
+            color: blue;
+            border: 2px solid black;
+        } */
+
+        /* grouping of selectors */
+        /* p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
+        } */
+
+        /* .box:nth-child(even){
+            background-color: blue;
+        } */
+
+        /* .box:nth-last-child(1){
+            background-color: red;
+        } */
+
+        /* add psuedo elements dynamically on first and last  */
+        .boxes::before {
+            content: "I am Ammar";
+            color: red;
+        }
+
+        .boxes::after {
+            content: "Son of Abid";
+            color: blue;
+        }
+
+        /* change properties while selecting */
+        ::selection{
+            background-color: black;
+            color: aqua;
+        }
+
+        .box::first-letter{
+            color: peru;
+            text-transform: lowercase;
+            font-size: 30px;
+        }
+        input::placeholder{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box">Hey I am a box.</div>
+        <div class="box">Hey I am a box.</div>
+        <input type="text" placeholder="Enter you name">
+    </div>
+</body>
+
+</html>
