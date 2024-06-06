@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gridbox</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid black;
+            display: grid;
+            /* grid-template-areas: "nav nav nav"
+                "side article article"
+                "footer footer footer"; */
+
+            /* set width of column individually */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+
+            /* to change position of items in grid */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* gap: 34px; */
+            /* row-gap: 10px;
+            column-gap: 44px;
+            justify-items: start;
+            align-items: center; */
+
+            /* to change position of whole grid when elements are very smaller than its container  */
+            grid-template-columns: repeat(4, 80px);
+            /* justify-content: center; */
+            grid-template-rows: repeat(2, 80px);
+            /* align-content: center; */
+
+            /* to set both justify and align content  */
+            place-content: center;
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        /* .item1 {
+            grid-area: nav;
+        }*/
+
+        /* .item2 {
+            grid-area: side; 
+             for individual 
+            align-self: start;
+            justify-self: end;
+        } */
+
+        /*
+        .item3 {
+            grid-area: article;
+        }
+
+        .item4 {
+            grid-area: footer;
+        } */
+
+        /* can overlap also */
+        /* .item5 {
+            grid-area: nav;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+    </div>
+</body>
+
+</html>
