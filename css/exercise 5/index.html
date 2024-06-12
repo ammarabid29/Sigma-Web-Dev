@@ -4,89 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Layout</title>
+    <title>Layout</title>
     <style>
         * {
             padding: 0;
             margin: 0;
         }
 
+        header{
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            background-color: pink;
+            height: 83px;
+        }
+
         body {
             background-color: black;
+            color: white;
         }
 
-        header {
-            background-color: pink;
-            height: 100px;
-            position: sticky;
-            top: 0px;
-        }
-
-        main {
+        .container {
             background-color: green;
-            height: 555px;
-            width: 90vw;
-            margin: auto;
-            margin-top: 30px;
-            display: flex;
-            align-items: center;
-        }
-
-        main>div {
-            margin: auto;
+            margin: 12px 34px;
+            text-align: center;
+            padding: 55px 23px;
         }
 
         .box1 {
-            background-color: bisque;
-            height: 500px;
-            width: 30vw;
+            background-color: palevioletred;
+            height: 70vh;
+            width: 45%;
+            display: inline-block;
+            margin: 0px 12px;
         }
 
         .box2 {
-            background-color: lightblue;
-            height: 500px;
-            width: 30vw;
+            background-color: blue;
+            height: 70vh;
+            width: 45%;
+            display: inline-block;
+            margin: 0px 12px;
         }
 
-        .about {
-            width: 80vw;
-            height: auto;
-            margin: auto;
-            margin-top: 30px;
-            padding: 30px;
-            color: white;
+        .text-box {
+            padding: 34px;
             border: 2px solid white;
-            border-radius: 17px;
+            margin: 50px 30vw;
+            font-size: 2em;
+            border-radius: 13px;
             text-align: center;
-            font-size: 4em;
+        }
+
+        .orange-box{
+            width: 32px;
+            height: 32px;
+            background-color: orange;
+            position: fixed;
+            bottom: 12px;
+            right: 23px;
+            border-radius: 60px;
         }
 
         footer {
-            margin-top: 50px;
-            height: 50px;
-            background-color: white;
-        }
-        .icon{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: rgb(249, 170, 73);
-            float: right;
-            position: fixed;
-            right: 30px;
-            bottom: 30px;
+            height: 100px;
+            background-color: bisque;
         }
     </style>
 </head>
 
 <body>
-    <Header></Header>
+    <header>
+        <nav></nav>
+    </header>
     <main>
-        <div class="box1"></div>
-        <div class="box2"></div>
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <div class="text-box">
+            <p>Welcome to Sigma Web Development Express</p>
+        </div>
+        <div class="orange-box"></div>
     </main>
-    <div class="icon"></div>
-    <div class="about">Welcome to this Sigma Web Development Express</div>
     <footer></footer>
 </body>
 
