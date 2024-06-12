@@ -4,26 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar using Flexbox</title>
+    <title>Flexbox EXercise</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        nav {
-            width: 80vw;
-            margin: auto;
-            padding: 20px 0px;
+        .logo img {
+            width: 123px;
+        }
+
+        .right ul {
+            display: flex;
+            gap: 34px;
+        }
+
+        .right ul li {
+            list-style: none;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            cursor: pointer;
         }
 
-        .headings a {
-            text-decoration: none;
-            color: black;
-            padding: 28px;
+        .right ul li span {
+            padding: 0 5px;
         }
     </style>
 </head>
@@ -31,15 +38,47 @@
 <body>
     <header>
         <nav>
-            <div class="image">
-                <img height="70px" src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="">
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="">
             </div>
-            <div class="headings">
-                <a href="">Product</a>
-                <a href="">Pricing</a>
-                <a href="">Resources</a>
-                <a href="">About us</a>
-                <a href="">Security and Complaince</a>
+            <div class="right">
+                <ul>
+                    <li>
+                        <span>Product</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>Pricing</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>Resources</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>About us</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="">
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
