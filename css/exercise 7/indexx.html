@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Exercise</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .logo img {
+            width: 153px;
+        }
+
+        .right ul {
+            display: flex;
+            gap: 44px;
+        }
+
+        .right ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .right ul li span {
+            padding: 0 5px;
+        }
+
+        main {
+            width: 65vw;
+            margin: auto;
+            padding: 18px;
+        }
+
+        .heading {
+            display: flex;
+            align-items: center;
+        }
+
+        .heading img {
+            height: 53px;
+        }
+
+        .p1 {
+            font-weight: bold;
+            padding-left: 15px;
+            font-size: x-large;
+        }
+
+        .p2 {
+            padding: 10px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f6f6;
+            border-radius: 3px;
+            padding: 20px;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            margin-top: 20px;
+            background-color: #5cb85c;
+            padding: 10px;
+            border-radius: 3px;
+
+        }
+
+        .button a {
+            color: white;
+            font-weight: bold;
+            font-style: normal;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Design the body of this website: 
+         https://bit.ly/UltraEdit-CWH -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <span>Product</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>Pricing</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>Resources</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>About us</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="heading">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png" alt="">
+            <p class="p1">Download UltraEdit</p>
+
+            <p class="p2"> v2024.0(released 04/19/2024) | Hotfix</p>
+        </div>
+        <div class="container">
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3>English</h3>
+                <div class="button">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*150puyc*_gcl_au*MTgwMDgxNjgyNC4xNzE4MTc2MTQ0*_ga*MTM0Mzk5Nzk4MS4xNzE4MTc2MTQ1*_ga_QNXHVTPWNS*MTcxODQ0Nzg3NC40LjEuMTcxODQ0ODAzMy40Ni4wLjA.">
+                        Download 64-bits</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
