@@ -14,39 +14,24 @@ let random = Math.random();
 
 // prompt give value in string so firstly convert it to float by parseFloat 
 let a = parseFloat(prompt("Enter first number"));
-let b = parseFloat(prompt("Enter second number"));
 let c = prompt("Enter operation");
+let b = parseFloat(prompt("Enter second number"));
+
+let obj = {
+    "+": "-",
+    "*": "+",
+    "-": "/",
+    "/": "*"
+}
 
 if (random > 0.1) {
     // accurate calculations 90% of the time
-    if (c == "+") {
-        result = a + b;
-    }
-    else if (c == "-") {
-        result = a - b;
-    }
-    else if (c == "*") {
-        result = a * b;
-    }
-    else if (c == "/") {
-        result = a / b;
-    }
+
+    // eval act as calculator in javascript
+    alert(`The result is ${eval(`${a} ${c} ${b}`)}`);
 }
 else {
     // faulty calculations
-    if (c == "+") {
-        result = a - b;
-    }
-    else if (c == "*") {
-        result = a + b;
-    }
-    else if (c == "-") {
-        result = a / b;
-    }
-    else if (c == "/") {
-        result = a ** b;
-    }
+    c = obj[c];
+    alert(`The result is ${eval(`${a} ${c} ${b}`)}`);
 }
-
-console.log(result);
-
