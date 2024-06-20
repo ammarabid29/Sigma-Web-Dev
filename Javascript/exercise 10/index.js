@@ -21,10 +21,14 @@ function getRandomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
 }
 
-function generateRandomBusinessNames(){
-    const adjectives = "Crazy Amazing Fire".split(" ");
-    const shopNames = "Engine Foods Garments".split(" ");
-    const anotherWords = "Bros Limited Hub".split(" ");
+function generateRandomBusinessNames() {
+    // const adjectives = "Crazy Amazing Fire".split(" ");
+    // const shopNames = "Engine Foods Garments".split(" ");
+    // const anotherWords = "Bros Limited Hub".split(" ");
+
+    const adjectives = ["Crazy", "Amazing", "Fire"];
+    const shopNames = ["Engine", "Foods", "Garments"];
+    const anotherWords = ["Bros", "Limited", "Hub"];
 
     const adjective = getRandomItem(adjectives);
     const shopName = getRandomItem(shopNames);
