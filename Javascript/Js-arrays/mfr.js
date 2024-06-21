@@ -27,5 +27,5 @@ const red = (a,b) => {
 }
 console.log(arr2.reduce(red));
 
-// convert any obj to array 
+// convert any string to array 
 console.log(Array.from("Ammar"));
