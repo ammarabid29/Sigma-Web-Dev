@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM</title>
+</head>
+
+<body>
+    <!-- DOM is a logical tree every element is represented in a tree form  -->
+    <!-- Document Object Model are used to make changes by Javascript -->
+    <div class="container">
+        <div class="box">
+            This is a Box
+        </div>
+    </div>
+    <script>
+        document.title = "Ammar is Good";
+        console.log(document.title);
+        console.log(document.body);
+        document.body.style.backgroundColor = "green";
+
+        //  Document Object Model DOM and Business Object Model BOM have different elements targeted e.g. document is under DOM and location is under BOM 
+        // All the elements can be shown by following 
+        console.log(window);
+        // window is global Object
+
+        // browser me jis element pr click kre inspect kr k wo $0 ho jata hai phir usse javascript me use kr k changing kr skte hain 
+        // As shown in picture 
+    </script>
+</body>
+
+</html>
