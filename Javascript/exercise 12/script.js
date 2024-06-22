@@ -1,19 +1,20 @@
-document.querySelectorAll(".box").forEach(e => {
-    let ran = Math.floor(Math.random() * 5);
-    console.log(ran);
-    if (ran == 0) {
-        e.style.backgroundColor = "green";
-    }
-    if (ran == 1) {
-        e.style.backgroundColor = "red";
-    }
-    if (ran == 2) {
-        e.style.backgroundColor = "blue";
-    }
-    if (ran == 3) {
-        e.style.backgroundColor = "aqua";
-    }
-    if (ran == 4) {
-        e.style.backgroundColor = "purple";
-    }
-});
+console.log("Script initializing")
+
+// following both can be used 
+// let boxes=document.querySelector(".container").children
+let boxes = document.getElementsByClassName("box");
+
+function getRandomColor() {
+    // numbers between 0 to 255 
+    // formula = min + Math.random(max-mix) 
+    // Math.ceil = 4.22 = 5
+    // Math.floor = 4.22 = 4
+    let val1 = Math.ceil(0 + Math.random() * 255);
+    let val2 = Math.ceil(0 + Math.random() * 255);
+    let val3 = Math.ceil(0 + Math.random() * 255);
+    return `rgb(${val1},${val2},${val3})`
+}
+Array.from(boxes).forEach(e => {
+    e.style.backgroundColor = getRandomColor();
+    e.style.color = getRandomColor();
+})
