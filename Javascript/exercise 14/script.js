@@ -1,87 +1,49 @@
-async function initializingHacking() {
-    let random = Math.ceil(Math.random() * 7000);
-    console.log(random)
+
+const randomDelay = () => {
     return new Promise((resolve, reject) => {
+        timeout = 1 + 6 * Math.random();
+        console.log(timeout);
+
         setTimeout(() => {
-            resolve("Initializing Hacking")
-        }, random);
+            resolve();
+        }, timeout * 1000);
     })
 }
 
-async function readFiles() {
-    let random = Math.ceil(Math.random() * 7000);
-    console.log(random)
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Reading your Files")
-        }, random);
-    })
-}
-
-async function detectPassword() {
-    let random = Math.ceil(Math.random() * 7000);
-    console.log(random)
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Password files Detected")
-        }, random);
-    })
-}
-
-async function sendPassword() {
-    let random = Math.ceil(Math.random() * 7000);
-    console.log(random)
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Sending all passwords and personal files to server")
-        }, random);
-    })
-}
-
-async function cleanUp() {
-    let random = Math.ceil(Math.random() * 7000);
-    console.log(random)
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Cleaning up")
-        }, random);
-    })
+const addItem = async (item) => {
+    await randomDelay();
+    let div = document.createElement("div");
+    div.innerHTML = item;
+    document.body.append(div);
 }
 
 async function main() {
-    let data1 = await initializingHacking();
-    let html1 = `<p>${data1}
-            <span class="blinking-dots"><span class="dot">.</span><span class="dot">.</span><span
-                    class="dot">.</span></span>
-        </p>`;
-    document.querySelector(".container").insertAdjacentHTML("beforeend", html1)
+    let t = setInterval(() => {
+        let last = document.body.getElementsByTagName("div");
+        last = last[last.length - 1];
+        if (last.innerHTML.endsWith("...")) {
+            last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 3);
+        }
+        else {
+            last.innerHTML = last.innerHTML + ".";
+        }
+    }, 100);
 
-    let data2 = await readFiles();
-    let html2 = `<p>${data2}
-            <span class="blinking-dots"><span class="dot">.</span><span class="dot">.</span><span
-                    class="dot">.</span></span>
-        </p>`;
-    document.querySelector(".container").insertAdjacentHTML("beforeend", html2)
-    
-    let data3 = await detectPassword();
-    let html3 = `<p>${data3}
-            <span class="blinking-dots"><span class="dot">.</span><span class="dot">.</span><span
-                    class="dot">.</span></span>
-        </p>`;
-    document.querySelector(".container").insertAdjacentHTML("beforeend", html3)
+    let text = [
+        "Initialized Hacking now reading your files",
+        "Reading your Files",
+        "Password files Detected",
+        "Sending all passwords and personal files to server",
+        "Cleaning up"
+    ];
 
-    let data4 = await sendPassword();
-    let html4 = `<p>${data4}
-            <span class="blinking-dots"><span class="dot">.</span><span class="dot">.</span><span
-                    class="dot">.</span></span>
-        </p>`;
-    document.querySelector(".container").insertAdjacentHTML("beforeend", html4)
+    for (const item of text) {
+        await addItem(item);
+    }
 
-    let data5 = await cleanUp();
-    let html5 = `<p>${data5}
-            <span class="blinking-dots"><span class="dot">.</span><span class="dot">.</span><span
-                    class="dot">.</span></span>
-        </p>`;
-    document.querySelector(".container").insertAdjacentHTML("beforeend", html5)
+    await randomDelay();
+    clearInterval(t);
 }
+
 main();
+
