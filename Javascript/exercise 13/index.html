@@ -7,64 +7,57 @@
     <title>Document</title>
     <style>
         .card {
-            color: white;
-            height: 144px;
-            width: 70vw;
-            padding: 0 12px;
-            margin: 20px auto;
             display: flex;
-            background-color: black;
-        }
-
-        .thumbnailHTML {
-            position: relative;
-            display: flex;
-            align-items: center;
+            border: 2px solid black;
+            width: 900px;
             justify-content: center;
+            align-items: center;
+            padding: 12px;
+            margin: 12px;
         }
 
-        .thumbnailHTML img {
-            height: 120px;
-            border-radius: 12px;
+        #btn {
+            height: 30px;
+            width: 80px;
+            background-color: black;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
         }
 
-        .thumbnailHTML span {
+        .image {
+            position: relative;
+        }
+
+        .image .capsule {
             position: absolute;
-            bottom: 18px;
-            right: 5px;
-            background-color: rgba(0, 0, 0, 0.705);
+            bottom: 10px;
+            right: 8px;
+            z-index: 10;
+            background-color: rgb(49, 44, 44);
+            opacity: 0.9;
+            color: white;
             padding: 3px;
-            border-radius: 5px;
+            border-radius: 4px;
+            font-size: 14px;
         }
 
-        .text {
-            margin: 0px 20px;
+        .image img {
+            width: 200px;
         }
 
-        .text span {
-            margin: 0px 12px;
-            opacity: 0.8;
+        .text h1,
+        p {
+            padding: 2px 0;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-       <div class="card">
-            <div class="thumbnailHTML">
-                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ"
-                    alt="">
-                <span>31:22</span>
-            </div>
-            <div class="text">
-                <h1>Introduction to Backend | Sigma Web Dev video #2</h1>
-
-                <span>Code with Harry</span>
-                <span>727k views</span>
-                <span>2 months ago</span>
-
-            </div>
-        </div>
+        <button id="btn">
+            Add card
+        </button>
     </div>
     <script src="script.js"></script>
 </body>

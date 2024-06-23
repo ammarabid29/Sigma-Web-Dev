@@ -1,42 +1,37 @@
 function createCard(title, cName, views, monthsOld, duration, thumbnail) {
-    
-    let card = document.createElement("div");
-    card.setAttribute("class", "card");
-
-    let thumbnailHTML = document.createElement("div");
-    thumbnailHTML.setAttribute("class", "thumbnailHTML");
-    card.append(thumbnailHTML);
-
-    let img = document.createElement("img");
-    img.setAttribute("src", `${thumbnail}`);
-    thumbnailHTML.append(img);
-
-    let span = document.createElement("span");
-    span.innerHTML = duration;
-    thumbnailHTML.append(span);
-
-    let text = document.createElement("div");
-    text.setAttribute("class", "text");
-    card.append(text);
-
-    let h1 = document.createElement("h1");
-    h1.innerHTML = title;
-    text.append(h1);
-
-    let span1 = document.createElement("span");
-    span1.innerHTML = cName;
-    text.append(span1);
-
-    let span2 = document.createElement("span");
-    span2.innerHTML = `${views}k views`;
-    text.append(span2);
-
-    let span3 = document.createElement("span");
-    span3.innerHTML = `${monthsOld} months ago`;
-    text.append(span3);
-
-    document.querySelector(".container").append(card);
+    let viewStr
+    if (views < 1000) {
+        viewStr = views;
+    }
+    else if (views > 1000000) {
+        viewStr = views / 1000000 + "M";
+    }
+    else {
+        viewStr = views / 1000 + "k";
+    }
+    let html = ` <div class="card">
+            <div class="image">
+                <img src="${thumbnail}"
+                    alt="">
+                    <div class="capsule">${duration}</div>
+            </div>
+            <div class="text">
+                <h1>
+                    ${title}
+                </h1>
+                <p>
+                    ${cName} . ${viewStr} views . ${monthsOld} months ago
+                </p>
+            </div>
+        </div>`;
+    // document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html;
+    document.querySelector(".container").insertAdjacentHTML("beforeend",html)
 }
 
-createCard("Introduction to Backend | Sigma Web Dev video #2", "CodeWithHarry", 560, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ");
-createCard("Introduction to Frontend | Sigma Web Dev video #2", "CodeWithHarry", 560, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ");
+document.getElementById("btn").addEventListener("click", ()=>{
+    createCard("Introduction to Backend | Sigma Web Dev video #1", "CodeWithHarry", 220000, 9, "16:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ");
+})
+
+// createCard("Introduction to Backend | Sigma Web Dev video #1", "CodeWithHarry", 220000, 9, "16:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ");
+// createCard("Introduction to Backend | Sigma Web Dev video #2", "CodeWithHarry", 56000000, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ");
+// createCard("Introduction to ExpressJs | Sigma Web Dev video #3", "CodeWithHarry", 560, 2, "12:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ");
