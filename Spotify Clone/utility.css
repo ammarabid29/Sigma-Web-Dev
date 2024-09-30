@@ -39,3 +39,33 @@
 .p-1{
     padding: 10px;
 }
+/* General scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px;  /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Track color (dark) */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555; /* Scrollbar handle color (darker gray) */
+    border-radius: 10px; /* Rounded corners for the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Scrollbar handle color on hover */
+}
+
+/* General scrollbar styles for Firefox */
+* {
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #555 #333; /* Handle color and track color */
+}
+
+/* Optional: Style for all elements (not recommended for performance) */
+body {
+    overflow-y: scroll; /* Always show scrollbar */
+}
